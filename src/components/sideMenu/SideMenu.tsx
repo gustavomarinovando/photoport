@@ -57,7 +57,7 @@ const SideMenu = () => {
           }}
           style={({ isActive }) => (isActive ? activeMenuStyles : {})}
         >
-          About
+          Acerca de
         </NavLink>
         {/* <NavLink
           className="hover:text-blue-600 smooth-transition text-xl"

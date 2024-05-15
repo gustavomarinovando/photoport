@@ -61,7 +61,7 @@ const Gallery = () => {
 
   return (
     <article className="sm:col-span-5 md:col-span-4 min-h-screen scrollbar-hide" style={{ paddingTop: '10vh' }}>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="flex flex-col items-center w-full xs:grid xs:grid-cols-3 xs:gap-4">
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataFood)}>
           <Images imagesToShow={[GalleryDataFood[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
@@ -71,7 +71,7 @@ const Gallery = () => {
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataLandscapes)}>
           <Images imagesToShow={[GalleryDataLandscapes[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '100px'}}>PAISAJES</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '90px'}}>MASCOTAS</div>
           </div>
         </div>
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataMacro)}>
@@ -100,8 +100,9 @@ const Gallery = () => {
         </div>
       </div>
 
+
       {isOpen && (
-        <section className="img-modal w-screen h-screen fixed z-30 top-0 left-0 flex justify-center items-start bg-rgba(255, 255, 255, .15) backdrop-blur-sm" style={{ paddingTop: '0vh' }}>
+        <section className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-75" >
           <button onClick={closeModal} className="absolute flex items-center justify-center z-40 text-2xl text-gray-200 text-bold p-2 bg-black rounded-full w-10 h-10 right-4 top-4 hover:-rotate-90 transition duration-500">
             X
           </button>

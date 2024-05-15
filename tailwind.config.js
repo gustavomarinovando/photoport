@@ -8,7 +8,8 @@ module.exports = {
       namefont: ['Anton', "sans-serif"],
     },
     screens: {
-      'sm': '375px',
+      'xs': '440px',
+      'sm': '350px',
       'md': '640px',
       'lg': '768px',
       'xl': '1024px',
