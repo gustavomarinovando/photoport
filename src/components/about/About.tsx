@@ -24,19 +24,46 @@ const About = () => {
 
         
         <section>
-        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Feldeliciosobolivia%2Fposts%2Fpfbid0bQqvUgE5pbfqyjLWArNnRJQU5fmKsByTqgrQCCfSZqtvkZ1vNQHeMqYXpMU9VXp9l&show_text=true&width=500&is_preview=true" width="500" height="705" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        
-        </section>
-        <section>
-        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02MJkURGcByTKsUCqZjrLabssLHo5K1yu2StgnGJ1n5kfP6ZRm1dfxi5LCkYzhSJt9l%26id%3D100076313136379&show_text=true&width=500&is_preview=true" width="500" height="667" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-          
-        </section>
-        <section>
-        <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61558490945660%2Fvideos%2F453380853920794%2F&show_text=false&width=560&t=0" width="560" height="314" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-        </section>
-        <section>
-        <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0pJVnbNnHHCV4zN5T5mdYgKYHF42gd64mpkmSTBrichMZJHUnsxYfsix8tKb2sLgEl%26id%3D100091316161220&show_text=true&width=500&is_preview=true" width="500" height="666" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        </section>
+        <iframe 
+  src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Feldeliciosobolivia%2Fposts%2Fpfbid0bQqvUgE5pbfqyjLWArNnRJQU5fmKsByTqgrQCCfSZqtvkZ1vNQHeMqYXpMU9VXp9l&show_text=true&width=500&is_preview=true" 
+  width="500" 
+  height="705" 
+  scrolling="no" 
+  frameBorder="0" 
+  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+></iframe>
+</section>
+<section>
+  <iframe 
+    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02MJkURGcByTKsUCqZjrLabssLHo5K1yu2StgnGJ1n5kfP6ZRm1dfxi5LCkYzhSJt9l%26id%3D100076313136379&show_text=true&width=500&is_preview=true" 
+    width="500" 
+    height="667" 
+    scrolling="no" 
+    frameBorder="0" 
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+  ></iframe>
+</section>
+<section>
+  <iframe 
+    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F61558490945660%2Fvideos%2F453380853920794%2F&show_text=false&width=560&t=0" 
+    width="560" 
+    height="314" 
+    scrolling="no" 
+    frameBorder="0" 
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+  ></iframe>
+</section>
+<section>
+  <iframe 
+    src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0pJVnbNnHHCV4zN5T5mdYgKYHF42gd64mpkmSTBrichMZJHUnsxYfsix8tKb2sLgEl%26id%3D100091316161220&show_text=true&width=500&is_preview=true" 
+    width="500" 
+    height="666" 
+    scrolling="no" 
+    frameBorder="0" 
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+  ></iframe>
+</section>
+
       </section>
     </article>
   )

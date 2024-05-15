@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import GalleryDataFood from '../../data/GalleryDataFood';
 import GalleryDataLandscapes from '../../data/GalleryDataLandscapes';
 import GalleryDataMacro from '../../data/GalleryDataMacro';
@@ -9,11 +9,15 @@ import GalleryDataCar from '../../data/GalleryDataCars';
 import Images from './Images';
 import 'react-slideshow-image/dist/styles.css';
 
+interface Image {
+  src: string;  // Supongamos que cada imagen tiene al menos una propiedad 'src'
+}
+
 const Gallery = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentImages, setCurrentImages] = useState([]);
+  const [currentImages, setCurrentImages] = useState<Image[]>([]);
   const [targetImg, setTargetImg] = useState(0);
-  const [modalStyle, setModalStyle] = useState({});
+  const [modalStyle, setModalStyle] = useState<React.CSSProperties>({});
 
   const handleNextClick = () => {
     setTargetImg(prevImg => (prevImg + 1) % currentImages.length);
@@ -23,7 +27,7 @@ const Gallery = () => {
     setTargetImg(prevImg => (prevImg - 1 + currentImages.length) % currentImages.length);
   };
 
-  const openModal = (images) => {
+  const openModal = (images: Image[]) => {
     setCurrentImages(images);
     setIsOpen(true);
     setTargetImg(0);
@@ -34,13 +38,13 @@ const Gallery = () => {
     setIsOpen(false);
   };
 
-  const setModalImg = (imgIndex) => {
+  const setModalImg = (imgIndex: number) => {
     setTargetImg(imgIndex);
     setIsOpen(true);
     adjustModalStyle(currentImages[imgIndex]);
   };
 
-  const adjustModalStyle = (image) => {
+  const adjustModalStyle = (image: Image) => {
     const img = new Image();
     img.src = image.src;
     img.onload = () => {
@@ -59,40 +63,39 @@ const Gallery = () => {
     <article className="sm:col-span-5 md:col-span-4 min-h-screen scrollbar-hide" style={{ paddingTop: '10vh' }}>
       <div className="grid grid-cols-3 gap-4">
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataFood)}>
-          <Images imagesToShow={[GalleryDataFood[0]]} toggle={setModalImg} setModalImg={() => setModalImg(0)} />
+          <Images imagesToShow={[GalleryDataFood[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold',paddingLeft: '60px'}}>GASTRONOMIA</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '60px' }}>GASTRONOMIA</div>
           </div>
         </div>
-        
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataLandscapes)}>
-          <Images imagesToShow={[GalleryDataLandscapes[0]]} toggle={setModalImg} setModalImg={() => setModalImg(0)} />
+          <Images imagesToShow={[GalleryDataLandscapes[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold',paddingLeft: '100px'}}>PAISAJES</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '100px'}}>PAISAJES</div>
           </div>
         </div>
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataMacro)}>
-          <Images imagesToShow={[GalleryDataMacro[0]]} toggle={setModalImg} setModalImg={() => setModalImg(0)} />
+          <Images imagesToShow={[GalleryDataMacro[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold',paddingLeft: '35px'}}>MACRO-FOTOGRAFIA</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '35px'}}>MACRO-FOTOGRAFIA</div>
           </div>
         </div>
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataPortrait)}>
-          <Images imagesToShow={[GalleryDataPortrait[0]]} toggle={setModalImg} setModalImg={() => setModalImg(0)} />
+          <Images imagesToShow={[GalleryDataPortrait[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold',paddingLeft: '105px'}}>RETRATO</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '105px'}}>RETRATO</div>
           </div>
         </div>
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataEvent)}>
-          <Images imagesToShow={[GalleryDataEvent[0]]} toggle={setModalImg} setModalImg={() => setModalImg(0)} />
+          <Images imagesToShow={[GalleryDataEvent[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold',paddingLeft: '100px'}}>EVENTOS</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '100px'}}>EVENTOS</div>
           </div>
         </div>
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataCar)}>
-          <Images imagesToShow={[GalleryDataCar[0]]} toggle={setModalImg} setModalImg={() => setModalImg(0)} />
+          <Images imagesToShow={[GalleryDataCar[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold',paddingLeft: '120px'}}>AUTOS</div>
+            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '120px'}}>AUTOS</div>
           </div>
         </div>
       </div>
