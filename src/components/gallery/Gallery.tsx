@@ -60,42 +60,42 @@ const Gallery = () => {
   };
 
   return (
-    <article className="sm:col-span-5 md:col-span-4 min-h-screen scrollbar-hide" style={{ paddingTop: '10vh' }}>
+    <article className="sm:col-span-5 md:col-span-4 min-h-screen scrollbar-hide" style={{ paddingTop: '0vh' }}>
       <div className="flex flex-col items-center w-full xs:grid xs:grid-cols-3 xs:gap-4">
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataFood)}>
           <Images imagesToShow={[GalleryDataFood[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '60px' }}>GASTRONOMIA</div>
+            <div className=" font-namefont text-5xl" style={{ fontSize: '30px', paddingLeft: '70px' }}>GASTRONOMIA</div>
           </div>
         </div>
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataLandscapes)}>
           <Images imagesToShow={[GalleryDataLandscapes[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '90px'}}>MASCOTAS</div>
+            <div className=" font-namefont text-5xl" style={{ fontSize: '30px', paddingLeft: '90px'}}>MASCOTAS</div>
           </div>
         </div>
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataMacro)}>
           <Images imagesToShow={[GalleryDataMacro[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '35px'}}>MACRO-FOTOGRAFIA</div>
+            <div className=" font-namefont text-5xl" style={{ fontSize: '30px', paddingLeft: '110px'}}>MACRO</div>
           </div>
         </div>
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataPortrait)}>
           <Images imagesToShow={[GalleryDataPortrait[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '105px'}}>RETRATO</div>
+            <div className=" font-namefont text-5xl" style={{ fontSize: '30px', paddingLeft: '105px'}}>RETRATO</div>
           </div>
         </div>
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataEvent)}>
           <Images imagesToShow={[GalleryDataEvent[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '100px'}}>EVENTOS</div>
+            <div className=" font-namefont text-5xl" style={{ fontSize: '30px', paddingLeft: '100px'}}>EVENTOS</div>
           </div>
         </div>
         <div className="cursor-pointer" onClick={() => openModal(GalleryDataCar)}>
           <Images imagesToShow={[GalleryDataCar[0]]} toggle={() => setModalImg(0)} setModalImg={() => setModalImg(0)} />
           <div style={{ display: 'flex', alignItems: 'center', height: '20px' }}>
-            <div style={{ fontSize: '24px', fontWeight: 'bold', paddingLeft: '120px'}}>AUTOS</div>
+            <div className=" font-namefont text-5xl" style={{ fontSize: '30px', paddingLeft: '120px'}}>AUTOS</div>
           </div>
         </div>
       </div>
